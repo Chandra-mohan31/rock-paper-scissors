@@ -63,12 +63,42 @@ const userChoice = (userChoice) => {
         uScore.innerHTML = userScore;
 
       }
+      const resCont = document.getElementById("result_container");
       if(userScore == 3){
-        alert('You won!');
-        window.location.reload();
+        // alert('You won!');
+        const successDIV = document.createElement("div");
+        successDIV.textContent = "You won!";
+        const restartBtn = document.createElement("button");
+        restartBtn.textContent = "NEW GAME";
+        restartBtn.addEventListener('click',()=>{
+            window.location.reload();
+        });
+        successDIV.appendChild(restartBtn);
+        document.getElementById("short_game_desc").remove();
+        resCont.appendChild(successDIV);
+        const gameCont = document.getElementsByClassName("game_container");
+        gameCont[0].style.visibility = 'hidden';
+        // window.location.reload();
     }else if(computerScore == 3){
-        alert("Computer won!");
-        window.location.reload();
+        // alert("Computer won!");
+        const computerWinDIV = document.createElement("div");
+        computerWinDIV.textContent = "Computer won!";
+        
+        const restartBtn = document.createElement("button");
+        restartBtn.textContent = "NEW GAME";
+        restartBtn.addEventListener('click',()=>{
+            window.location.reload();
+        })
+        computerWinDIV.appendChild(restartBtn);
+        document.getElementById("short_game_desc").remove();
+
+        resCont.appendChild(computerWinDIV);
+        const gameCont = document.getElementsByClassName("game_container");
+
+        gameCont[0].style.visibility = 'hidden';
+
+        // window.location.reload();
+
         
     }
     setTimeout(resetCards,1500);

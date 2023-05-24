@@ -43,6 +43,25 @@ img{
 font-size: 30px;
 font-weight: bold;
 }
+@keyframes animateVS {
+    0%{
+        background-color: black;
+        color: white;
+
+
+    }50%{
+        background-color: aqua;
+        color: black;
+    }75%{
+        background-color: #ffcc00;
+        border-color: #ffcc00;
+        color: #ffffff;
+    }
+    100%{
+        background-color: aqua;
+        color: green;
+    }
+  }
 .vs_container {
     margin-top: 100px;
     display: flex;
@@ -60,16 +79,27 @@ font-weight: bold;
     text-align: center;
     color: #333333;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: ease;
+    animation: animateVS 6s ease 1s infinite alternate-reverse;
   }
   
-  .vs_container:hover {
+  /* .vs_container:hover {
     background-color: #ffcc00;
     border-color: #ffcc00;
     color: #ffffff;
     text-shadow: none;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-  }
+  } */
 
+#result_container > div{
+    font-size: 40px;
+}
+#result_container > div > button{
+    background-color: whitesmoke;
+    color: black;
+    font-size: 30px;
+    border-radius: 20px;
+}
 
 @media screen and (max-width: 1180px){
     img{
