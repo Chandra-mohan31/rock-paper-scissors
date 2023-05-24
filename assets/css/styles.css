@@ -1,1 +1,102 @@
 /* css file   */
+body{
+    margin: 0;
+    background: linear-gradient(to right, rgb(22, 22, 22) , rgb(173, 13, 222));
+color: whitesmoke;
+    
+}
+
+.game_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20vh;
+    /* flex-wrap: wrap; */
+}
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.computer_playground{
+    text-align: center;
+}
+.user_playground{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.user_playground_container{
+    text-align: center;
+}
+
+.user_playground > div:hover,.computer_playground > img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+#user_score,#computer_score{
+font-size: 30px;
+font-weight: bold;
+}
+.vs_container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    background-color: #e3e3e3;
+    border: 2px solid #333333;
+    border-radius: 50%;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vs_container:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    color: #ffffff;
+    text-shadow: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  }
+
+
+@media screen and (max-width: 1180px){
+    img{
+        height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px;
+    }
+    .vs_container{
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+
+    }
+    .user_playground{
+        flex-direction: column;
+    }
+}
+
+/* .vs_container{
+    height: 150px;
+    width: 150px;
+    background-image: url('../images/vsimage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+} */
+

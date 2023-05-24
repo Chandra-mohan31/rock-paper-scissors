@@ -1,1 +1,56 @@
 <!-- html file -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Stone-Paper-Scissors</title>
+</head>
+<body>
+    <h2 style="text-align: center;">The Rock Paper Scissors Game</h2>
+
+    <div class="game_container">
+        <div class="computer_playground">
+            <div id="computer_score_card">
+                <h2>Computer</h2>
+                <p id="computer_score">0</p>
+
+            </div>
+            
+            <img id="computer_output" src="assets/images/ready.png" alt="computer" />
+        </div>
+
+        <div class="vs_container">
+            <!-- <img src="./assets/images/vsimage.jpg" alt="vs" /> -->
+            <h1>VS</h1>
+        </div>
+        <div class="user_playground_container">
+            <div class="user_score_card">
+            
+            <h2>You</h2>
+            <p id="user_score">0</p>
+        </div>
+        <div class="user_playground">
+            
+
+            <div id="rock" onclick="userChoice('rock')">
+                <img id="computer_output" src="assets/images/rock.png" alt="computer" />
+
+            </div>
+            <div id="paper" onclick="userChoice('paper')">
+                <img id="computer_output" src="assets/images/paper.png" alt="computer" />
+
+            </div>
+            <div id="scissor" onclick="userChoice('scissor')">
+                <img id="computer_output" src="assets/images/scissor.png" alt="computer" />
+
+            </div>
+        </div></div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
